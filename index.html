@@ -3,118 +3,34 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>imgLazy</title>
+    <title>plugins|naraku666</title>
     <style>
-    .img-wrap {
-        font-size: 0;
-        width: 810px;
-        list-style: none;
-        margin: 0 auto;
+    .wrap {
+        font: 14px "Helvetica Neue", Arial, "Hiragino Sans GB", "WenQuanYi Micro Hei", "Microsoft YaHei", sans-serif;
+        max-width: 500px;
+        margin: 20px auto;
+        border: 1px solid #dedede;
+        padding: 10px;
     }
     
-    .img-wrap li {
-        position: relative;
-        font-size: 14px;
+    .wrap_item {
+        padding: 10px;
+    }
+    .wrap_jump::after{
         display: inline-block;
-        width: 260px;
-        height: 150px;
-        margin: 5px;
-        background-color: #f5f5f5;
-    }
-    
-    .img-wrap li img {
-    	position: relative;
-        z-index: 2;
-        opacity: 0;
-        width: 260px;
-        height: 150px;
-        transition: all .3s;
-    }
-    .img-wrap > li > img.fade{
-        opacity: 1;
-    }
-    
-    .img-wrap li:after {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "loading...";
-        color: #8E8D8D;
-        width: 100%;
-        line-height: 150px;
-        text-align: center;
-        z-index:1;
+        content: "↵";
+        transform: rotate(180deg);
     }
     </style>
 </head>
 
 <body>
-    <ul class="img-wrap">
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-        <li><img src="" data-src="./imgs/img1.png"></li>
-        <li><img src="" data-src="./imgs/img2.png"></li>
-        <li><img src="" data-src="./imgs/img3.png"></li>
-        <li><img src="" data-src="./imgs/img4.png"></li>
-        <li><img src="" data-src="./imgs/img5.png"></li>
-        <li><img src="" data-src="./imgs/img6.png"></li>
-        <li><img src="" data-src="./imgs/img7.png"></li>
-        <li><img src="" data-src="./imgs/img8.png"></li>
-        <li><img src="" data-src="./imgs/img9.png"></li>
-        <li><img src="" data-src="./imgs/img10.png"></li>
-    </ul>
-    <script src="imageLazy.js"></script>
-    <script>
-    	imageLazy('.img-wrap')
-    </script>
+    <section class="wrap">
+        <ol>
+            <li class="wrap_item">图片懒加载：<a class="wrap_jump" href="./imageLazy/demo.html" target="_blank">DEMO</a></li>
+            <li class="wrap_item">全局小提示：<a class="wrap_jump" href="./notice/notice.html" target="_blank">DEMO</a></li>
+        </ol>
+    </section>
 </body>
 
 </html>
