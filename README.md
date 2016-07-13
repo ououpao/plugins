@@ -1,2 +1,1 @@
-# plugins
-小插件集合
+### [DEMO](https://naraku666.github.io/plugins/)
