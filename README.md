@@ -1,1 +1,1 @@
-### [DEMO](https://naraku666.github.io/plugins/)
+### [DEMO](https://kraaas.github.io/plugins/)
